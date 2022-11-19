@@ -19,7 +19,7 @@ const brainPrimes = () => {
  
   const userName = askName();
   let roundCounter = 0;
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no"');
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   while(roundCounter < 3) {
   let answerGame = 'no'
    const question = Math.round(Math.random() * 500);
@@ -32,7 +32,7 @@ const brainPrimes = () => {
   }
   answerUser = readlineSync.question('Your answer: ');
   if(answerUser.toLowerCase()=== answerGame) {
-     console.log('Correct');
+     console.log('Correct!');
     roundCounter += 1 ;
   }
   else {
