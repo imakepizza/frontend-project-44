@@ -8,3 +8,5 @@ brain-gcd:
 https://asciinema.org/a/vVQ6GZNDojZOrCpEKqD9bybpQ
 brain-progression:
 https://asciinema.org/a/IfsZEOtG7pyr1VnjWMO3RUtnR
+brain-primes:
+https://asciinema.org/a/fiXnoNgBIeoqEJYCgXuP7M2PG
