@@ -1,48 +1,34 @@
 import readlineSync from 'readline-sync';
-
-const askName = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-  return name;
-};
-
+import {gameLogic} from './index.js'
 
 const brainPrimes = () => {
-  const primes = [2, 3, 5, 7, 11,  13,  17,  19,  23,  29,  31,  37,  41,  43,  47,  53,  59,  61,  67,  71,
-73,  79,  83,  89,  97,  101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173,
-179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281,
-283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409,
-419, 421, 431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499]
-  let answerUser = '';
+  const primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37,
+    41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101,
+    103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173,
+    179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251,
+    257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 331, 337,
+    347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421,
+    431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499];
   
- 
-  const userName = askName();
-  let roundCounter = 0;
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  while(roundCounter < 3) {
-  let answerGame = 'no'
-   const question = Math.round(Math.random() * 500);
-  
-  console.log(`Question: ${question}`);
-  for(const v of primes) {
-    if(question === v) {
-      answerGame = 'yes';
+  const gameData = [];
+  const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  for(let i = 0; i < 3; i += 1) {
+    const result = [];
+     let answerGame = 'no';
+    const question = Math.round(Math.random() * 500);
+    result.push(question);
+   
+    for (const v of primes) {
+      if (question === v) {
+        answerGame = 'yes';
+      }
     }
+    result.push(answerGame);
+    gameData.push(result);
+    
   }
-  answerUser = readlineSync.question('Your answer: ');
-  if(answerUser.toLowerCase()=== answerGame) {
-     console.log('Correct!');
-    roundCounter += 1 ;
-  }
-  else {
-    console.log(
-        `'${answerUser}' is wrong answer ;(. Correct answer was '${answerGame}'
-        \nLet's try again, ${userName}!`,
-      );
-      return;
-  }
+  gameLogic(description, gameData);
+
+   
 }
-  console.log(`Congratulations, ${userName}`);
-};
 export { brainPrimes };
