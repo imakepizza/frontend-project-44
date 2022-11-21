@@ -22,7 +22,8 @@ const brainProgression = () => {
     const spacedNumber = Math.round(Math.random() * 10);
     const answerGame = question[spacedNumber].toString();
     question[spacedNumber] = ' .. ';
-    result.push(question);
+
+    result.push(question.join(' '));
     result.push(answerGame);
     gameData.push(result);
   }
