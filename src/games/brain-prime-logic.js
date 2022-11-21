@@ -14,14 +14,13 @@ const brainPrime = () => {
   for (let i = 0; i < 3; i += 1) {
     const result = [];
     let answerGame = 'no';
-    let question = Math.round(Math.random() * 50);
-    result.push(`${question}`);
-
-    for (let j = 0; j < primes.length; j += 0) {
+    let question = Math.round(Math.random() * 500);
+    for (let j = 0; j < primes.length; j += 1) {
       if (question === primes[j]) {
         answerGame = 'yes';
       }
     }
+    result.push(`${question}`);
     result.push(answerGame);
     gameData.push(result);
   }
