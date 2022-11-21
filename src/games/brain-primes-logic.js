@@ -27,4 +27,4 @@ const brainPrimes = () => {
   }
   gameLogic(description, gameData);
 };
-export default brainPrimes;
+export default brainPrime;
