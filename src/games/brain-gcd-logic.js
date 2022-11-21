@@ -21,7 +21,7 @@ const brainGcd = () => {
     const secondNumber = Math.round(Math.random() * rangeOfNumbers);
     const question = `${firstNumber} ${secondNumber}`;
     const answerGame = (gcd(firstNumber, secondNumber)).toString();
-    result.push(question);
+    result.push(question.toString());
     result.push(answerGame);
     gameData.push(result);
   }
