@@ -14,7 +14,7 @@ const brainPrimes = () => {
   const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   for(let i = 0; i < 3; i += 1) {
     const result = [];
-     let answerGame = 'no';
+    let answerGame = 'no';
     const question = Math.round(Math.random() * 500);
     result.push(question);
    
@@ -25,7 +25,6 @@ const brainPrimes = () => {
     }
     result.push(answerGame);
     gameData.push(result);
-    
   }
   gameLogic(description, gameData);
 
