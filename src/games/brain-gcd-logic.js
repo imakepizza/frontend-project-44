@@ -4,7 +4,7 @@ const gcd = (num1, num2) => {
   let temp = 0;
   let n1 = num1;
   let n2 = num2;
-  while (num2) {
+  while (n2) {
     temp = n2;
     n2 = n1 % n2;
     n1 = temp;
@@ -21,7 +21,7 @@ const brainGcd = () => {
     const secondNumber = Math.round(Math.random() * rangeOfNumbers);
     const question = `${firstNumber} ${secondNumber}`;
     const answerGame = (gcd(firstNumber, secondNumber)).toString();
-    result.push(question.toString());
+    result.push(question);
     result.push(answerGame);
     gameData.push(result);
   }
