@@ -16,8 +16,7 @@ const gameLogic = (description, gameData) => {
       roundCounter += 1;
     } else {
       console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answerGame}'.
-        \nLet's try again, ${name}!`,
-      );
+        \nLet's try again, ${name}!`);
       return;
     }
   }

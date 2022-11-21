@@ -14,7 +14,7 @@ const brainPrime = () => {
   for (let i = 0; i < 3; i += 1) {
     const result = [];
     let answerGame = 'no';
-    let question = Math.round(Math.random() * 500);
+    const question = Math.round(Math.random() * 500);
     for (let j = 0; j < primes.length; j += 1) {
       if (question === primes[j]) {
         answerGame = 'yes';
