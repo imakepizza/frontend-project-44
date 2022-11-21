@@ -1,5 +1,4 @@
-import readlineSync from 'readline-sync';
-import {gameLogic} from './index.js'
+import gameLogic from '../index.js'
 
 const gcd = (num1, num2) => {
   let temp = 0;

@@ -1,5 +1,4 @@
-import readlineSync from 'readline-sync';
-import {gameLogic} from './index.js'
+import gameLogic from '../index.js';
 
 const brainEven = () => {
   const description ='Answer "yes" if the number is even, otherwise answer "no".';

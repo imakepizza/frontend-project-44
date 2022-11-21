@@ -1,5 +1,4 @@
-import readlineSync from 'readline-sync';
-import {gameLogic} from './index.js'
+import gameLogic from '../index.js'
 
 
 const fillsUp = () => {
@@ -17,16 +16,15 @@ const brainProgression = () => {
   const description = 'What number is missing in the progression?';
   const gameData = [];
   for(let i = 0; i < 3; i += 1) {
-  const progression = fillsUp();
+  const question= fillsUp();
   const result = [];
   let spacedNumber = Math.round(Math.random()* 10);
-  let answerGame = progression[spacedNumber].toString();
-  progression[spacedNumber] = ' .. ';
-  result.push(progression);
+  let answerGame = question[spacedNumber].toString();
+  question[spacedNumber] = ' .. ';
+  result.push(question);
   result.push(answerGame);
   gameData.push(result);
   }
-
   gameLogic(description, gameData);
  
 };

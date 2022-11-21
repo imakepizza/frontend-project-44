@@ -25,4 +25,4 @@ while (roundCounter < 3) {
   }
   console.log(`Congratulations, ${name}`);
 }
-export {gameLogic};
+export default gameLogic;
