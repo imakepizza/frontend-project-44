@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import askName from './cli.js';
 
 const gameLogic = (description, gameData) => {
   console.log('Welcome to the Brain Games!');

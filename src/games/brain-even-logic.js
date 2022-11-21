@@ -1,4 +1,4 @@
-import gameLogic from '../index';
+import gameLogic from '../index.js';
 
 const brainEven = () => {
   const description = 'Answer "yes" if the number is even, otherwise answer "no".';

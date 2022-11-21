@@ -1,4 +1,4 @@
-import gameLogic from '../index';
+import gameLogic from '../index.js';
 
 const calculate = (num1, num2, sign) => {
   if (sign === '+') {

@@ -1,4 +1,4 @@
-import gameLogic from '../index';
+import gameLogic from '../index.js';
 
 const gcd = (num1, num2) => {
   let temp = 0;

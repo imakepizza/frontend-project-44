@@ -1,4 +1,4 @@
-import gameLogic from '../index';
+import gameLogic from '../index.js';
 
 const fillsUp = () => {
   const arr = [];
