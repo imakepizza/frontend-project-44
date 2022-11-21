@@ -1,6 +1,6 @@
 import gameLogic from '../index.js';
 
-const calculate = (num1, num2, sign) => {
+const calculateWithChosenSign = (num1, num2, sign) => {
   if (sign === '+') {
     return (num1 + num2);
   }
@@ -9,7 +9,7 @@ const calculate = (num1, num2, sign) => {
   }
   return (num1 * num2);
 };
-const brainCalc = () => {
+export default () => {
   const gameData = [];
   const signs = ['+', '-', '*'];
   const description = 'What is the result of the expression?';
@@ -20,12 +20,12 @@ const brainCalc = () => {
     const secondNumber = Math.round(Math.random() * rangeOfNumbers);
     const randSign = Math.round(Math.random() * 2);
     const question = `${firstNumber} ${signs[randSign]} ${secondNumber}`;
-    const answerGame = (calculate(firstNumber, secondNumber, signs[randSign])).toString();
+    const answerGame = (
+      calculateWithChosenSign(firstNumber, secondNumber, signs[randSign])
+    ).toString();
     result.push(question);
     result.push(answerGame);
     gameData.push(result);
   }
   gameLogic(description, gameData);
 };
-
-export default brainCalc;

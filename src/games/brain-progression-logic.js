@@ -1,6 +1,6 @@
 import gameLogic from '../index.js';
 
-const fillsUp = () => {
+const fillsUpNumberProgression = () => {
   const arr = [];
   const rangeOfNumbers = 150;
   const stepRange = 9;
@@ -13,11 +13,11 @@ const fillsUp = () => {
   return arr;
 };
 
-const brainProgression = () => {
+export default () => {
   const description = 'What number is missing in the progression?';
   const gameData = [];
   for (let i = 0; i < 3; i += 1) {
-    const question = fillsUp();
+    const question = fillsUpNumberProgression();
     const result = [];
     const spacedNumber = Math.round(Math.random() * 9);
     const answerGame = `${question[spacedNumber]}`;
@@ -29,4 +29,3 @@ const brainProgression = () => {
   }
   gameLogic(description, gameData);
 };
-export default brainProgression;

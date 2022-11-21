@@ -1,6 +1,6 @@
 import gameLogic from '../index.js';
 
-const brainEven = () => {
+export default () => {
   const description = 'Answer "yes" if the number is even, otherwise answer "no".';
   const gameData = [];
   const rangeOfNumbers = 100;
@@ -15,4 +15,3 @@ const brainEven = () => {
   }
   gameLogic(description, gameData);
 };
-export default brainEven;

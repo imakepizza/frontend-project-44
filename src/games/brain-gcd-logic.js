@@ -11,7 +11,7 @@ const gcd = (num1, num2) => {
   }
   return n1;
 };
-const brainGcd = () => {
+export default () => {
   const gameData = [];
   const description = 'Find the greatest common divisor of given numbers.';
   for (let i = 0; i < 3; i += 1) {
@@ -27,4 +27,3 @@ const brainGcd = () => {
   }
   gameLogic(description, gameData);
 };
-export default brainGcd;
