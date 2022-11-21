@@ -19,7 +19,7 @@ const brainProgression = () => {
   for (let i = 0; i < 3; i += 1) {
     const question = fillsUp();
     const result = [];
-    const spacedNumber = Math.round(Math.random() * 10);
+    const spacedNumber = Math.round(Math.random() * 9);
     const answerGame = `${question[spacedNumber]}`;
     question[spacedNumber] = '..';
 
