@@ -20,11 +20,11 @@ const brainProgression = () => {
     const question = fillsUp();
     const result = [];
     const spacedNumber = Math.round(Math.random() * 10);
-    const answerGame = question[spacedNumber];
+    const answerGame = question[spacedNumber].toString();
     question[spacedNumber] = '..';
 
     result.push(question.join(' '));
-    result.push(answerGame.toString());
+    result.push(answerGame);
     gameData.push(result);
   }
   gameLogic(description, gameData);
