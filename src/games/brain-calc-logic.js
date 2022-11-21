@@ -1,4 +1,4 @@
-import gameLogic from '../index.js';
+import gameLogic from '../index';
 
 const calculate = (num1, num2, sign) => {
   if (sign === '+') {
@@ -14,7 +14,7 @@ const brainCalc = () => {
   const signs = ['+', '-', '*'];
   const description = 'What is the result of the expression?';
   const rangeOfNumbers = 25;
-  for(let i = 0; i < 3; i += 1) {
+  for (let i = 0; i < 3; i += 1) {
     const result = [];
     const firstNumber = Math.round(Math.random() * rangeOfNumbers);
     const secondNumber = Math.round(Math.random() * rangeOfNumbers);
@@ -28,4 +28,4 @@ const brainCalc = () => {
   gameLogic(description, gameData);
 };
 
-export { brainCalc };
+export default brainCalc;

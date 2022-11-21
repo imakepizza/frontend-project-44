@@ -1,31 +1,31 @@
-import gameLogic from '../index.js'
-
+import gameLogic from '../index';
 
 const fillsUp = () => {
   const arr = [];
-  const step = Math.round((Math.random() * 9) + 1);
-  const start = Math.round(Math.random() * 150);
+  const rangeOfNumbers = 150;
+  const stepRange = 9;
+  const step = Math.round((Math.random() * stepRange) + 1);
+  const start = Math.round(Math.random() * rangeOfNumbers);
   const end = start + step * 10;
-  for(let i = start; i < end; i += step) {
+  for (let i = start; i < end; i += step) {
     arr.push(i);
   }
   return arr;
-}
+};
 
 const brainProgression = () => {
   const description = 'What number is missing in the progression?';
   const gameData = [];
-  for(let i = 0; i < 3; i += 1) {
-  const question= fillsUp();
-  const result = [];
-  let spacedNumber = Math.round(Math.random()* 10);
-  let answerGame = question[spacedNumber].toString();
-  question[spacedNumber] = ' .. ';
-  result.push(question);
-  result.push(answerGame);
-  gameData.push(result);
+  for (let i = 0; i < 3; i += 1) {
+    const question = fillsUp();
+    const result = [];
+    const spacedNumber = Math.round(Math.random() * 10);
+    const answerGame = question[spacedNumber].toString();
+    question[spacedNumber] = ' .. ';
+    result.push(question);
+    result.push(answerGame);
+    gameData.push(result);
   }
   gameLogic(description, gameData);
- 
 };
-export { brainProgression };
+export default brainProgression;

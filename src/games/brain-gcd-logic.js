@@ -1,18 +1,20 @@
-import gameLogic from '../index.js'
+import gameLogic from '../index';
 
 const gcd = (num1, num2) => {
   let temp = 0;
+  let n1 = num1;
+  let n2 = num2;
   while (num2) {
-    temp = num2;
-    num2 = num1 % num2;
-    num1 = temp
+    temp = n2;
+    n2 = n1 % n2;
+    n1 = temp;
   }
-  return num1;
-}
+  return n1;
+};
 const brainGcd = () => {
   const gameData = [];
   const description = 'Find the greatest common divisor of given numbers.';
-  for(let i = 0; i < 3; i += 1) {
+  for (let i = 0; i < 3; i += 1) {
     const result = [];
     let answerGame = '';
     let question = '';
@@ -22,10 +24,9 @@ const brainGcd = () => {
     question = `${firstNumber} ${secondNumber}`;
     answerGame = (gcd(firstNumber, secondNumber)).toString();
     result.push(question);
-    result.push(answerGame)
+    result.push(answerGame);
     gameData.push(result);
-    }
+  }
   gameLogic(description, gameData);
-
 };
-export { brainGcd };
+export default brainGcd;
