@@ -1,14 +1,10 @@
 import readlineSync from 'readline-sync';
+import {gameLogic} from './index.js'
 
-const askName = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-  return name;
-};
+
 const fillsUp = () => {
   const arr = [];
-  const step = Math.round(Math.random() * 9 + 1);
+  const step = Math.round((Math.random() * 9) + 1);
   const start = Math.round(Math.random() * 150);
   const end = start + step * 10;
   for(let i = start; i < end; i += step) {
@@ -18,30 +14,20 @@ const fillsUp = () => {
 }
 
 const brainProgression = () => {
-  
-  let answerUser = '';
-  const userName = askName();
-  let roundCounter = 0;
-  console.log('What number is missing in the progression?');
-  while(roundCounter < 3) {
+  const description = 'What number is missing in the progression?';
+  const gameData = [];
+  for(let i = 0; i < 3; i += 1) {
   const progression = fillsUp();
-  let spacedNumber = Math.round(Math.random()*10);
-  let answerGame = progression[spacedNumber];
+  const result = [];
+  let spacedNumber = Math.round(Math.random()* 10);
+  let answerGame = progression[spacedNumber].toString();
   progression[spacedNumber] = ' .. ';
-  console.log(`Question: ${progression}`);
-  answerUser = readlineSync.question('Your answer: ');
-  if(Number(answerUser) === answerGame) {
-    console.log('Correct');
-    roundCounter +=1;
+  result.push(progression);
+  result.push(answerGame);
+  gameData.push(result);
   }
-  else {
-    console.log(
-        `'${answerUser}' is wrong answer ;(. Correct answer was '${answerGame}'
-        ,\nLet's try again, ${userName}!`,
-      );
-      return;
-  }
-}
-  console.log(`Congratulations, ${userName}`);
+
+  gameLogic(description, gameData);
+ 
 };
 export { brainProgression };
