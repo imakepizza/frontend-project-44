@@ -1,5 +1,13 @@
 import gameLogic from '../index.js';
 
+const isPrime = (num, arrOfPrimes) => {
+  for (let i = 0; i < arrOfPrimes.length; i += 1) {
+    if (num === arrOfPrimes[i]) {
+      return true;
+    }
+  }
+  return false;
+};
 export default () => {
   const arrOfPrimes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37,
     41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101,
@@ -17,11 +25,7 @@ export default () => {
     const result = [];
     let answerGame = 'no';
     const question = Math.round(Math.random() * rangeOfAskedNumbers);
-    for (let j = 0; j < arrOfPrimes.length; j += 1) {
-      if (question === arrOfPrimes[j]) {
-        answerGame = 'yes';
-      }
-    }
+    answerGame = isPrime(question, arrOfPrimes) ? 'yes' : 'no';
     result.push(`${question}`);
     result.push(answerGame);
     gameData.push(result);
