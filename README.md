@@ -14,12 +14,27 @@ npm link
 Use following commands in your terminal to play:
 
 brain-even
-[![asciicast](https://asciinema.org/a/KIKciCi8JPqhOrKycGXUtiNQd.svg)](https://asciinema.org/a/KIKciCi8JPqhOrKycGXUtiNQd)
+
+[![asciicast](https://asciinema.org/a/KIKciCi8JPqhOrKycGXUtiNQd.svg)]
+(https://asciinema.org/a/KIKciCi8JPqhOrKycGXUtiNQd)
+
 brain-calc
-[![asciicast](https://asciinema.org/a/KIKciCi8JPqhOrKycGXUtiNQd.svg)](https://asciinema.org/a/CqcovqpGXKOwawt0wYXYeYLMK
-brain-gcd)
-[![asciicast](https://asciinema.org/a/KIKciCi8JPqhOrKycGXUtiNQd.svg)](https://asciinema.org/a/vVQ6GZNDojZOrCpEKqD9bybpQ
-brain-progression)
-[![asciicast](https://asciinema.org/a/KIKciCi8JPqhOrKycGXUtiNQd.svg)](https://asciinema.org/a/IfsZEOtG7pyr1VnjWMO3RUtnR
-brain-primes)
-[![asciicast](https://asciinema.org/a/KIKciCi8JPqhOrKycGXUtiNQd.svg)](https://asciinema.org/a/fiXnoNgBIeoqEJYCgXuP7M2PG)
+
+[![asciicast](https://asciinema.org/a/KIKciCi8JPqhOrKycGXUtiNQd.svg)]
+(https://asciinema.org/a/CqcovqpGXKOwawt0wYXYeYLMK)
+
+brain-gcd
+
+[![asciicast](https://asciinema.org/a/KIKciCi8JPqhOrKycGXUtiNQd.svg)]
+(https://asciinema.org/a/vVQ6GZNDojZOrCpEKqD9bybpQ)
+
+brain-progression
+
+[![asciicast](https://asciinema.org/a/KIKciCi8JPqhOrKycGXUtiNQd.svg)]
+(https://asciinema.org/a/IfsZEOtG7pyr1VnjWMO3RUtnR)
+
+
+brain-primes
+
+[![asciicast](https://asciinema.org/a/KIKciCi8JPqhOrKycGXUtiNQd.svg)]
+(https://asciinema.org/a/fiXnoNgBIeoqEJYCgXuP7M2PG)
