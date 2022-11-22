@@ -20,7 +20,7 @@ export default () => {
     const result = [];
     const firstNumber = Math.round(Math.random() * rangeOfNumbers);
     const secondNumber = Math.round(Math.random() * rangeOfNumbers);
-    const randSign = Math.round(Math.random() * rangeOfSigns;
+    const randSign = Math.round(Math.random() * rangeOfSigns);
     const question = `${firstNumber} ${signs[randSign]} ${secondNumber}`;
     const answerGame = (
       calculatesWithChosenSign(firstNumber, secondNumber, signs[randSign])
