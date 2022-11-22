@@ -4,7 +4,8 @@ export default () => {
   const description = 'Answer "yes" if the number is even, otherwise answer "no".';
   const gameData = [];
   const rangeOfNumbers = 100;
-  for (let i = 0; i < 3; i += 1) {
+  const numberOfRounds = 3;
+  for (let i = 0; i < numberOfRounds; i += 1) {
     const result = [];
     const numberToGuess = Math.round(Math.random() * rangeOfNumbers);
     const question = `${numberToGuess}`;

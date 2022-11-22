@@ -14,7 +14,8 @@ const gcd = (num1, num2) => {
 export default () => {
   const gameData = [];
   const description = 'Find the greatest common divisor of given numbers.';
-  for (let i = 0; i < 3; i += 1) {
+  const numberOfRounds = 3;
+  for (let i = 0; i < numberOfRounds; i += 1) {
     const result = [];
     const rangeOfNumbers = 100;
     const firstNumber = Math.round(Math.random() * rangeOfNumbers);
