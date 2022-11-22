@@ -16,7 +16,7 @@ export default () => {
   for (let i = 0; i < numberOfRounds; i += 1) {
     const result = [];
     let answerGame = 'no';
-    const question = (Math.round(Math.random() * rangeOfAskedNumbers);
+    const question = Math.round(Math.random() * rangeOfAskedNumbers);
     for (let j = 0; j < arrOfPrimes.length; j += 1) {
       if (question === arrOfPrimes[j]) {
         answerGame = 'yes';
