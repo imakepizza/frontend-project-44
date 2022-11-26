@@ -5,17 +5,16 @@ const gameLogic = (description, gameData) => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log(`${description}`);
-  let roundCounter = 0;
+  const roundsCount = 3;
   let answerUser = '';
-  while (roundCounter < 3) {
-    const [question, answerGame] = gameData[roundCounter];
+  for (let gamesRound = 0; gamesRound < roundsCount; gamesRound += 1) {
+    const [question, correctAnswer] = gameData[gamesRound];
     console.log(`Question: ${question}`);
     answerUser = readlineSync.question('Your answer: ');
-    if (answerGame === answerUser) {
+    if (correctAnswer === answerUser) {
       console.log('Correct!');
-      roundCounter += 1;
     } else {
-      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${answerGame}'.
+      console.log(`'${answerUser}' is wrong answer ;(. Correct answer was '${correctAnswer}'.
         \nLet's try again, ${name}!`);
       return;
     }
