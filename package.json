@@ -2,7 +2,6 @@
   "name" : "@hexlet/code",
   "version": "1.0.0",
   "description": "Brain Games project is a set of games to level up your  brain",
-  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
