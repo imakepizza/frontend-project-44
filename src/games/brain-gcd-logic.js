@@ -1,4 +1,5 @@
 import gameLogic from '../index.js';
+import getRandomInteger from '../utils.js';
 
 const gcd = (num1, num2) => {
   let temp = 0;
@@ -17,9 +18,8 @@ export default () => {
   const numberOfRounds = 3;
   for (let i = 0; i < numberOfRounds; i += 1) {
     const result = [];
-    const rangeOfNumbers = 100;
-    const firstNumber = Math.round(Math.random() * rangeOfNumbers);
-    const secondNumber = Math.round(Math.random() * rangeOfNumbers);
+    const firstNumber = getRandomInteger(0, 100);
+    const secondNumber = getRandomInteger(0, 100);
     const question = `${firstNumber} ${secondNumber}`;
     const answerGame = (gcd(firstNumber, secondNumber)).toString();
     result.push(question);

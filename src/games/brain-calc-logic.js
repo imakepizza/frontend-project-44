@@ -1,4 +1,5 @@
 import gameLogic from '../index.js';
+import getRandomInteger from '../utils.js';
 
 const calculatesWithChosenSign = (num1, num2, sign) => {
   if (sign === '+') {
@@ -13,14 +14,11 @@ export default () => {
   const gameData = [];
   const signs = ['+', '-', '*'];
   const description = 'What is the result of the expression?';
-  const rangeOfNumbers = 25;
-  const rangeOfSigns = 2;
-  const numberOfRounds = 3;
-  for (let i = 0; i < numberOfRounds; i += 1) {
+  for (let i = 0; i < 3; i += 1) {
     const result = [];
-    const firstNumber = Math.round(Math.random() * rangeOfNumbers);
-    const secondNumber = Math.round(Math.random() * rangeOfNumbers);
-    const randSign = Math.round(Math.random() * rangeOfSigns);
+    const firstNumber = getRandomInteger(0, 25);
+    const secondNumber = getRandomInteger(0, 25);
+    const randSign = getRandomInteger(0, 2);
     const question = `${firstNumber} ${signs[randSign]} ${secondNumber}`;
     const answerGame = (
       calculatesWithChosenSign(firstNumber, secondNumber, signs[randSign])

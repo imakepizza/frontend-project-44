@@ -1,4 +1,5 @@
 import gameLogic from '../index.js';
+import getRandomInteger from '../utils.js';
 
 const isPrime = (num, arrOfPrimes) => {
   for (let i = 0; i < arrOfPrimes.length; i += 1) {
@@ -20,11 +21,10 @@ export default () => {
   const gameData = [];
   const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const numberOfRounds = 3;
-  const rangeOfAskedNumbers = 500;
   for (let i = 0; i < numberOfRounds; i += 1) {
     const result = [];
     let answerGame = 'no';
-    const question = Math.round(Math.random() * rangeOfAskedNumbers);
+    const question = getRandomInteger(0, 500);
     answerGame = isPrime(question, arrOfPrimes) ? 'yes' : 'no';
     result.push(`${question}`);
     result.push(answerGame);
