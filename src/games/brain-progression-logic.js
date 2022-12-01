@@ -1,4 +1,4 @@
-import gameLogic from '../index.js';
+import { gameLogic, ROUNDS_COUNT } from '../index.js';
 import getRandomInteger from '../utils.js';
 
 const fillsUpNumberProgression = () => {
@@ -12,21 +12,18 @@ const fillsUpNumberProgression = () => {
   }
   return arr;
 };
-
+const generateRound = () => {
+  const question = fillsUpNumberProgression();
+  const spacedNumber = getRandomInteger(0, 9);
+  const answer = `${question[spacedNumber]}`;
+  question[spacedNumber] = '..';
+  return [question, answer];
+};
 export default () => {
-  const description = 'What number is missing in the progression?';
   const gameData = [];
-  const numberOfRounds = 3;
-  for (let i = 0; i < numberOfRounds; i += 1) {
-    const question = fillsUpNumberProgression();
-    const result = [];
-    const spacedNumber = getRandomInteger(0, 9);
-    const answerGame = `${question[spacedNumber]}`;
-    question[spacedNumber] = '..';
-
-    result.push(question.join(' '));
-    result.push(answerGame);
-    gameData.push(result);
+  const description = 'What number is missing in the progression?';
+  for (let i = 0; i < ROUNDS_COUNT; i += 1) {
+    gameData.push(generateRound());
   }
   gameLogic(description, gameData);
 };
