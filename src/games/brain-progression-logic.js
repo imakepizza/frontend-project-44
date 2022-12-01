@@ -1,7 +1,6 @@
 import gameLogic from '../index.js';
 import getRandomInteger from '../utils.js';
 
-
 const fillsUpNumberProgression = () => {
   const arr = [];
   const endOfRange = 10;
