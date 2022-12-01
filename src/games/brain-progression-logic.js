@@ -17,7 +17,8 @@ const generateRound = () => {
   const spacedNumber = getRandomInteger(0, 9);
   const answer = `${question[spacedNumber]}`;
   question[spacedNumber] = '..';
-  return [question, answer];
+
+  return [question.join(' '), answer];
 };
 export default () => {
   const gameData = [];
