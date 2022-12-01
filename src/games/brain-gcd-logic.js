@@ -1,4 +1,4 @@
-import { gameLogic, ROUNDS_COUNT} from '../index.js';
+import { gameLogic, ROUNDS_COUNT } from '../index.js';
 import getRandomInteger from '../utils.js';
 
 const gcd = (num1, num2) => {
