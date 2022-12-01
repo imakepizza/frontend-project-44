@@ -1,14 +1,15 @@
 import gameLogic from '../index.js';
 import getRandomInteger from '../utils.js';
 
-const calculatesWithChosenSign = (num1, num2, sign) => {
-  if (sign === '+') {
-    return (num1 + num2);
+const calculatesWithChosenOperator = (num1, num2, operator) => {
+  switch (operator) {
+    case '+': return num1 + num2;
+    case '-': return num1 - num2;
+    case '*': return num1 * num2;
+    default: {
+      throw new Error(`Operator ${operator} - is invalid`);
+    }
   }
-  if (sign === '-') {
-    return (num1 - num2);
-  }
-  return (num1 * num2);
 };
 export default () => {
   const gameData = [];
@@ -21,7 +22,7 @@ export default () => {
     const randSign = getRandomInteger(0, 2);
     const question = `${firstNumber} ${signs[randSign]} ${secondNumber}`;
     const answerGame = (
-      calculatesWithChosenSign(firstNumber, secondNumber, signs[randSign])
+      calculatesWithChosenOperator(firstNumber, secondNumber, signs[randSign])
     ).toString();
     result.push(question);
     result.push(answerGame);
