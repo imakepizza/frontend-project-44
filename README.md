@@ -17,7 +17,7 @@ Use following commands in your terminal to play:
 
 brain-even
 
-[![asciicast](https://asciinema.org/a/rHhWUAb2cdZxyPfl4KJlThn6h.svg)](https://asciinema.org/a/rHhWUAb2cdZxyPfl4KJlThn6h
+[![asciicast](https://asciinema.org/a/rHhWUAb2cdZxyPfl4KJlThn6h.svg)](https://asciinema.org/a/rHhWUAb2cdZxyPfl4KJlThn6h)
 
 brain-calc
 
