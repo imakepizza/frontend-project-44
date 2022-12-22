@@ -1,17 +1,20 @@
-import { gameLogic, ROUNDS_COUNT } from '../index.js';
+import { runEngine, ROUNDS_COUNT } from '../index.js';
 import getRandomInteger from '../utils.js';
+
+const isEven = (num) => num % 2 === 0;
 
 const generateRound = () => {
   const numberToGuess = getRandomInteger(0, 100);
   const question = `${numberToGuess}`;
-  const answer = numberToGuess % 2 === 0 ? 'yes' : 'no';
+  const answer = isEven(numberToGuess) ? 'yes' : 'no';
   return [question, answer];
 };
+
 export default () => {
   const gameData = [];
-  const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
   for (let i = 0; i < ROUNDS_COUNT; i += 1) {
     gameData.push(generateRound());
   }
-  gameLogic(description, gameData);
+  runEngine(gameRules, gameData);
 };

@@ -17,21 +17,21 @@ Use following commands in your terminal to play:
 
 brain-even
 
-[![asciicast](https://asciinema.org/a/KIKciCi8JPqhOrKycGXUtiNQd.svg)](https://asciinema.org/a/KIKciCi8JPqhOrKycGXUtiNQd)
+[![asciicast](https://asciinema.org/a/rHhWUAb2cdZxyPfl4KJlThn6h.svg)](https://asciinema.org/a/rHhWUAb2cdZxyPfl4KJlThn6h
 
 brain-calc
 
-[![asciicast](https://asciinema.org/a/KIKciCi8JPqhOrKycGXUtiNQd.svg)](https://asciinema.org/a/CqcovqpGXKOwawt0wYXYeYLMK)
+[![asciicast](https://asciinema.org/a/EVKwT7FD14qf9T2c2zr8tCRL3)](https://asciinema.org/a/EVKwT7FD14qf9T2c2zr8tCRL3)
 
 brain-gcd
 
-[![asciicast](https://asciinema.org/a/KIKciCi8JPqhOrKycGXUtiNQd.svg)](https://asciinema.org/a/vVQ6GZNDojZOrCpEKqD9bybpQ)
+[![asciicast](https://asciinema.org/a/ceLj5GfEV6ltCUnnaddqa1v0A.svg)](https://asciinema.org/a/ceLj5GfEV6ltCUnnaddqa1v0A)
 
 brain-progression
 
-[![asciicast](https://asciinema.org/a/KIKciCi8JPqhOrKycGXUtiNQd.svg)](https://asciinema.org/a/IfsZEOtG7pyr1VnjWMO3RUtnR)
+[![asciicast](https://asciinema.org/a/vnTuRHcG7U8QL1cKnyHCNawlW.svg)](https://asciinema.org/a/vnTuRHcG7U8QL1cKnyHCNawlW)
 
 
 brain-primes
 
-[![asciicast](https://asciinema.org/a/KIKciCi8JPqhOrKycGXUtiNQd.svg)](https://asciinema.org/a/fiXnoNgBIeoqEJYCgXuP7M2PG)
+[![asciicast](https://asciinema.org/a/IsFQTKhJ5Ct4QvzCSfRUc3hMF.svg)](https://asciinema.org/a/IsFQTKhJ5Ct4QvzCSfRUc3hMF)

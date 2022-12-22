@@ -1,4 +1,4 @@
-import { gameLogic, ROUNDS_COUNT } from '../index.js';
+import { runEngine, ROUNDS_COUNT } from '../index.js';
 import getRandomInteger from '../utils.js';
 
 const gcd = (num1, num2) => {
@@ -12,6 +12,7 @@ const gcd = (num1, num2) => {
   }
   return n1;
 };
+
 const generateRound = () => {
   const firstNumber = getRandomInteger(0, 100);
   const secondNumber = getRandomInteger(0, 100);
@@ -19,11 +20,12 @@ const generateRound = () => {
   const answer = (gcd(firstNumber, secondNumber)).toString();
   return [question, answer];
 };
+
 export default () => {
   const gameData = [];
-  const description = 'Find the greatest common divisor of given numbers.';
+  const gameRules = 'Find the greatest common divisor of given numbers.';
   for (let i = 0; i < ROUNDS_COUNT; i += 1) {
     gameData.push(generateRound());
   }
-  gameLogic(description, gameData);
+  runEngine(gameRules, gameData);
 };

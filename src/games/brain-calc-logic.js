@@ -1,4 +1,4 @@
-import { gameLogic, ROUNDS_COUNT } from '../index.js';
+import { runEngine, ROUNDS_COUNT } from '../index.js';
 import getRandomInteger from '../utils.js';
 
 const calculatesWithChosenOperator = (num1, num2, operator) => {
@@ -11,22 +11,24 @@ const calculatesWithChosenOperator = (num1, num2, operator) => {
     }
   }
 };
+
 const generateRound = () => {
   const signs = ['+', '-', '*'];
   const firstNumber = getRandomInteger(0, 25);
   const secondNumber = getRandomInteger(0, 25);
-  const randSign = getRandomInteger(0, 2);
-  const question = `${firstNumber} ${signs[randSign]} ${secondNumber}`;
+  const randomSign = signs[getRandomInteger(0, 2)];
+  const question = `${firstNumber} ${randomSign} ${secondNumber}`;
   const answer = (
-    calculatesWithChosenOperator(firstNumber, secondNumber, signs[randSign])
+    calculatesWithChosenOperator(firstNumber, secondNumber, randomSign)
   ).toString();
   return [question, answer];
 };
+
 export default () => {
   const gameData = [];
-  const description = 'What is the result of the expression?';
+  const gameRules = 'What is the result of the expression?';
   for (let i = 0; i < ROUNDS_COUNT; i += 1) {
     gameData.push(generateRound());
   }
-  gameLogic(description, gameData);
+  runEngine(gameRules, gameData);
 };
