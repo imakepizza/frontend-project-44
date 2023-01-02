@@ -7,15 +7,15 @@
 node: v18.12.1
 
 ## Install with:
+```bash
+  git clone https://github.com/imakepizza/frontend-project-44.git
 
-git clone https://github.com/imakepizza/frontend-project-44.git
+  cd frontend-project-44
 
-cd frontend-project-44
+  make install
 
-make install
-
-npm link
-
+  npm link
+```
 ## Brain games project includes 5 mini games!
 Use following commands in your terminal to play:
 
