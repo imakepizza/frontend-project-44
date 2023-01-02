@@ -10,10 +10,9 @@ const makeProgression = (step, start, end) => {
 };
 
 const generateRound = () => {
-  const step = getRandomInteger(0, 9) + 1;
+  const step = getRandomInteger(0, 10);
   const start = getRandomInteger(0, 150);
-  const rangeSize = 10;
-  const end = start + step * rangeSize;
+  const end = 150;
   const progression = makeProgression(step, start, end);
   const spacedNumber = getRandomInteger(0, 9);
   const answer = `${progression[spacedNumber]}`;
