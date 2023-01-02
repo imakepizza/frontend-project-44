@@ -8,6 +8,10 @@ node: v18.12.1
 
 ## Install with:
 
+git clone https://github.com/imakepizza/frontend-project-44.git
+
+cd frontend-project-44
+
 make install
 
 npm link
@@ -21,7 +25,7 @@ brain-even
 
 brain-calc
 
-[![asciicast](https://asciinema.org/a/EVKwT7FD14qf9T2c2zr8tCRL3)](https://asciinema.org/a/EVKwT7FD14qf9T2c2zr8tCRL3)
+[![asciicast](https://asciinema.org/a/EVKwT7FD14qf9T2c2zr8tCRL3.svg)](https://asciinema.org/a/EVKwT7FD14qf9T2c2zr8tCRL3)
 
 brain-gcd
 
