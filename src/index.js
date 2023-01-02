@@ -4,7 +4,7 @@ import welcomeUser from './cli.js';
 const ROUNDS_COUNT = 3;
 
 const runEngine = (gameRules, gameData) => {
-  const name = welcomeUser();
+  const name = readlineSync.question('May I have your name? ');
   console.log(`${gameRules}`);
   for (let i = 0; i < ROUNDS_COUNT; i += 1) {
     const [question, correctAnswer] = gameData[i];
