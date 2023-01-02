@@ -14,7 +14,7 @@ const makeProgression = (step, start, length) => {
 const generateRound = () => {
   const step = getRandomInteger(1, 10);
   const start = getRandomInteger(0, 150);
-  const length= 10
+  const length = 10;
   const progression = makeProgression(step, start, length);
   const spacedNumber = getRandomInteger(0, 10);
   const answer = `${progression[spacedNumber]}`;

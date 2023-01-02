@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import welcomeUser from './cli.js';
 
 const ROUNDS_COUNT = 3;
 
