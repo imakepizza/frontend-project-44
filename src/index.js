@@ -4,7 +4,9 @@ import welcomeUser from './cli.js';
 const ROUNDS_COUNT = 3;
 
 const runEngine = (gameRules, gameData) => {
+  console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
   console.log(`${gameRules}`);
   for (let i = 0; i < ROUNDS_COUNT; i += 1) {
     const [question, correctAnswer] = gameData[i];
